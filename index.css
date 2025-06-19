@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #031260;
+    
+}
+#scorecard {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: red;
+    margin-bottom: 8px;
+    
+}
+
+.btnarea{
+    display: flex;
+    justify-content: center;
+}
+button{
+   background-color: transparent;
+   color: white;
+   border: 1px solid whitesmoke;
+   margin: 3px;
+   display: flex;
+   justify-content: space-around;
+}
+
+
+h3,h2{
+  color: white;  
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  padding: 0;
+
+ 
+}

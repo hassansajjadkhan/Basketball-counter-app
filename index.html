@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h3>HOME</h3>
+                <div  id="scorecard">
+                    <h1 id="scorer">0</h1>
+                    
+                </div>
+                <div class="btnarea">
+                    <button id="btn" onclick="incone()">+1</button>
+                    <button id="btn" onclick="inctwo()">+2</button>
+                    <button id="btn" onclick="incthree()">+3</button>
+                    </div>
+            </div>
+            <div>
+                <h3>GUEST</h3>
+                <div id="scorecard">
+                    <h1 id="scorerone">0</h1>
+                    
+                </div>
+                <div class="btnarea">
+                    <button id="btn" onclick="inconeo()">+1</button>
+                    <button id="btn" onclick="inctwoo()">+2</button>
+                    <button id="btn" onclick="incthreeo()">+3</button>
+                    </div>
+                     
+            </div>
+       
+        </div>
+        <div class="container">
+        <button id="resetscore" onclick="newscr()">new Game</button>
+        </div>
+        <div class="container">
+        <h2>Last Game Score: </h2><h2 id="prev"></h2>
+        </div>
+       
+        <script src="index.js"></script>
+    </body>
+</html>
