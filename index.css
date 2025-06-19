@@ -1,43 +1,163 @@
+/* Global Styles */
 body {
     margin: 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #031260;
-    
-}
-#scorecard {
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    color: red;
-    margin-bottom: 8px;
-    
-}
-
-.btnarea{
+    font-family: 'Caprasimo', sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+    color: white;
     display: flex;
     justify-content: center;
-}
-button{
-   background-color: transparent;
-   color: white;
-   border: 1px solid whitesmoke;
-   margin: 3px;
-   display: flex;
-   justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
-h3,h2{
-  color: white;  
-  font-family: "Caprasimo", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  padding: 0;
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);  /* semi-transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(8px); /* subtle blur effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 50px;
+    margin: 10px;
+}
 
- 
+/* Scorecard Styling */
+#scorecard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Subtle dark background */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+#scorecard:hover {
+    transform: scale(1.05);
+}
+
+#scorer, #scorerone {
+    font-size: 80px;
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Button Area */
+.btnarea {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Buttons Styling */
+button {
+    background: #ff4d4d;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.4);
+}
+
+button:hover {
+    background: #ff6f6f;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.6);
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+/* Reset Button */
+#resetscore {
+    background: #6c63ff;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.5);
+}
+
+#resetscore:hover {
+    background: #8a7eff;
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.7);
+}
+
+#resetscore:active {
+    transform: scale(1.05);
+}
+
+/* Last Game Score Section */
+h2 {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+#prev {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffb3b3;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Text Styling */
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #scorecard {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #scorer, #scorerone {
+        font-size: 60px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px 18px;
+    }
+
+    #resetscore {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
 }
